@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Draggable } from "react-beautiful-dnd";
 
 const Container = styled.div`
   border: 1px solid lightgrey;
@@ -7,15 +8,28 @@ const Container = styled.div`
   margin-bottom: 8px;
 `;
 
-const Task = ({
-  task,
-}: {
+interface ITaskProps {
   task: {
     id: string;
     content: string;
   };
-}) => {
-  return <Container>{task.content}</Container>;
+  index: number;
+}
+
+const Task = ({ task, index }: ITaskProps) => {
+  return (
+    <Draggable draggableId={task.id} index={index}>
+      {(provided) => (
+        <Container
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+        >
+          {task.content}
+        </Container>
+      )}
+    </Draggable>
+  );
 };
 
 export default Task;

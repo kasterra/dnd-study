@@ -19,7 +19,9 @@ git checkout <태그 명>
 ```
 
 ## 📜 현재 제공중인 태그들
+
 - init : 초기 repo 설정 및 스타일링
+- intro : [첫번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-1/)에서 다룬 끝부분
 
 # ⚒️ Tech stacks used in this repo 
 
@@ -31,7 +33,7 @@ git checkout <태그 명>
 
 ![yarn berry](https://img.shields.io/badge/yarn%20berry-2C8EBB?style=for-the-badge&logo=yarn&logoColor=61DAFB)
 
-![awesome dnd](https://img.shields.io/badge/react%20awesome%20dnd-0BAF7C?style=for-the-badge)
+![beautiful dnd](https://img.shields.io/badge/react%20beautiful%20dnd-0BAF7C?style=for-the-badge)
 
 ![emotion](https://img.shields.io/badge/emotion-C865B9?style=for-the-badge)
 

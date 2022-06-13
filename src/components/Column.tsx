@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Droppable } from "react-beautiful-dnd";
 import Task from "./Task";
 
 const Container = styled.div`
@@ -25,11 +26,18 @@ const Column = ({ column, tasks }: IColumnProps) => {
   return (
     <Container>
       <Title>{column.title}</Title>
-      <TaskList>
-        {tasks.map((task) => (
-          <Task key={task.id} task={task} />
-        ))}
-      </TaskList>
+      <Droppable droppableId={column.id}>
+        {(provided) => (
+          <TaskList {...provided.droppableProps} ref={provided.innerRef}>
+            <>
+              {tasks.map((task, idx) => (
+                <Task key={task.id} task={task} index={idx} />
+              ))}
+              {provided.placeholder}
+            </>
+          </TaskList>
+        )}
+      </Droppable>
     </Container>
   );
 };
