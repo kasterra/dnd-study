@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# 📚 About this repo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React.js에서 쉽게 drag and drop 관련 기능을 구현할 수 있게 해주는 라이브러리 [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)의 [공식 튜토리얼 비디오](https://egghead.io/courses/beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)의 내용을 한국어로 번역하면서 정리하는 블로그 글에 사용될 블로그 독자분들을 도와드리기 위한 Github Repo 입니다.
 
-## Available Scripts
+# 🏃 Getting Started
 
-In the project directory, you can run:
+이 레포지토리는 yarn berry zero-install을 사용합니다. `git clone`을 통해서 clone 한 이후에 [아래](#📜-현재-제공중인-태그들)에서 소개한 태그들을 활용해서 `checkout`해서 사용하시면 됩니다.
 
-### `npm start`
+Create-react-app으로 만들어졌기에, 실행 해보려면 `yarn start`로 실행하면 됩니다. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+최신버전 Ubuntu 22.04에서 Visual Studio Code로 작동이 됨을 확인하였습니다. 만약, 실행이 안되는 환경이 있으면 issue를 남겨 주세요!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 🏷️ This Repo provides git tags
 
-### `npm test`
+강의 내용을 따라오면서, 사용한 코드를 직접 확인해보시고 싶다고요? 이 레포에서 저자가 달아놓은 코드를 활용해서 필요한 부분을 체크아웃해서 확인해 보세요.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git checkout <태그 명>
+```
 
-### `npm run build`
+## 📜 현재 제공중인 태그들
+- init : 초기 repo 설정 및 스타일링
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# ⚒️ Tech stacks used in this repo 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+본 레포지토리에서는 아래와 같은 테크 스택을 사용합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![react logo](https://img.shields.io/badge/React%2018-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-### `npm run eject`
+![typescript logo](https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=61DAFB)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![yarn berry](https://img.shields.io/badge/yarn%20berry-2C8EBB?style=for-the-badge&logo=yarn&logoColor=61DAFB)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![awesome dnd](https://img.shields.io/badge/react%20awesome%20dnd-0BAF7C?style=for-the-badge)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![emotion](https://img.shields.io/badge/emotion-C865B9?style=for-the-badge)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This Project is BootStrapped with Create React App <img src="public/createreactapp.svg" style="color:#09D3AC; width:2em; margin-left:5px;"/>.

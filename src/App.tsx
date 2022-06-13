@@ -1,23 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Column from "./components/Column";
+import initialData from "./initial-data";
+interface IData {
+  tasks: {
+    [key: string]: { id: string; content: string };
+  };
+  columns: {
+    [key: string]: { id: string; title: string; taskIds: string[] };
+  };
+  columnOrder: string[];
+}
 
 function App() {
+  const [data, setData] = useState<IData>(initialData);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {data.columnOrder.map((columnId) => {
+          const column = data.columns[columnId];
+          const tasks = column.taskIds.map((taskId) => data.tasks[taskId]);
+          return <Column column={column} tasks={tasks} key={column.id} />;
+        })}
       </header>
     </div>
   );
