@@ -23,6 +23,8 @@ git checkout <태그 명>
 - init : 초기 repo 설정 및 스타일링
 - intro : [첫번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-1/)에서 다룬 끝부분
 - resultPersistence : [두번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-2/)에서 다룬 `onDragEnd` 작성하기 부분
+- styleUsingSnapshot : [두번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-2/)에서 다룬 snapshot 인수를 이용한 스타일링 부분
+- callbackGlobalStyle : [두번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-2/) 다룬 `DragDropContext`의 콜백을 이용한 스타일링 부분
 
 # ⚒️ Tech stacks used in this repo 
 
