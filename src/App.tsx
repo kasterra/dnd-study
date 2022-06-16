@@ -1,7 +1,12 @@
+import styled from "@emotion/styled";
 import React, { useCallback, useState } from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import Column from "./components/Column";
 import initialData from "./initial-data";
+
+const Container = styled.div`
+  display: flex;
+`;
 interface IData {
   tasks: {
     [key: string]: { id: string; content: string };
@@ -51,11 +56,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <DragDropContext onDragEnd={onDragEnd}>
-          {data.columnOrder.map((columnId) => {
-            const column = data.columns[columnId];
-            const tasks = column.taskIds.map((taskId) => data.tasks[taskId]);
-            return <Column column={column} tasks={tasks} key={column.id} />;
-          })}
+          <Container>
+            {data.columnOrder.map((columnId) => {
+              const column = data.columns[columnId];
+              const tasks = column.taskIds.map((taskId) => data.tasks[taskId]);
+              return <Column column={column} tasks={tasks} key={column.id} />;
+            })}
+          </Container>
         </DragDropContext>
       </header>
     </div>
