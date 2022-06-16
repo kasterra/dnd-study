@@ -25,6 +25,7 @@ git checkout <태그 명>
 - resultPersistence : [두번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-2/)에서 다룬 `onDragEnd` 작성하기 부분
 - styleUsingSnapshot : [두번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-2/)에서 다룬 snapshot 인수를 이용한 스타일링 부분
 - callbackGlobalStyle : [두번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-2/) 다룬 `DragDropContext`의 콜백을 이용한 스타일링 부분
+- specificDrag : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 다룬 Drag Handle 따로 지정하기 부분
 
 # ⚒️ Tech stacks used in this repo 
 
