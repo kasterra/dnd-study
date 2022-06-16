@@ -36,7 +36,10 @@ const Column = ({ column, tasks }: IColumnProps) => {
   return (
     <Container>
       <Title>{column.title}</Title>
-      <Droppable droppableId={column.id}>
+      <Droppable
+        droppableId={column.id}
+        type={column.id === "column-3" ? "done" : "active"}
+      >
         {(provided, snapshot) => (
           <TaskList
             {...provided.droppableProps}
