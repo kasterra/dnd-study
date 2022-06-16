@@ -27,6 +27,9 @@ git checkout <태그 명>
 - callbackGlobalStyle : [두번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-2/) 다룬 `DragDropContext`의 콜백을 이용한 스타일링 부분
 - specificDrag : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 다룬 Drag Handle 따로 지정하기 부분
 - multipleColumn : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 여러 Column간 item 이동 부분
+- isDragDisabled : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 `isDragDisabled`를 이용해서 드래그 제한하기 부분
+- controlWithType : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 `TYPE`을 이용해서 drag를 더 자세히 제어하기 부분
+- isDropDiabled : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 isDropDisabled를 이용한 제어 부분
 
 # ⚒️ Tech stacks used in this repo 
 

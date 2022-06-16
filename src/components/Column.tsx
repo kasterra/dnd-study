@@ -30,13 +30,14 @@ interface IColumnProps {
     id: string;
     content: string;
   }[];
+  isDropDisabled: boolean;
 }
 
-const Column = ({ column, tasks }: IColumnProps) => {
+const Column = ({ column, tasks, isDropDisabled }: IColumnProps) => {
   return (
     <Container>
       <Title>{column.title}</Title>
-      <Droppable droppableId={column.id}>
+      <Droppable droppableId={column.id} isDropDisabled={isDropDisabled}>
         {(provided, snapshot) => (
           <TaskList
             {...provided.droppableProps}

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React, { useCallback, useState } from "react";
-import { DragDropContext, DropResult } from "react-beautiful-dnd";
+import { DragDropContext, DragStart, DropResult } from "react-beautiful-dnd";
 import Column from "./components/Column";
 import initialData from "./initial-data";
 
@@ -19,8 +19,17 @@ interface IData {
 
 function App() {
   const [data, setData] = useState<IData>(initialData);
+  const [homeIndex, setHomeIndex] = useState<number | null>(null);
+
+  const onDragStart = useCallback((start: DragStart) => {
+    const newHomeIndex = data.columnOrder.indexOf(start.source.droppableId);
+    setHomeIndex(newHomeIndex);
+  }, []);
+
   const onDragEnd = useCallback(
     (result: DropResult) => {
+      setHomeIndex(null);
+
       const { destination, source, draggableId } = result;
       if (!destination) return;
       if (
@@ -84,12 +93,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <DragDropContext onDragEnd={onDragEnd}>
+        <DragDropContext onDragStart={onDragStart} onDragEnd={onDragEnd}>
           <Container>
-            {data.columnOrder.map((columnId) => {
+            {data.columnOrder.map((columnId, index) => {
               const column = data.columns[columnId];
               const tasks = column.taskIds.map((taskId) => data.tasks[taskId]);
-              return <Column column={column} tasks={tasks} key={column.id} />;
+
+              const isDropDisabled = homeIndex && index < homeIndex;
+
+              return (
+                <Column
+                  column={column}
+                  tasks={tasks}
+                  key={column.id}
+                  isDropDisabled={!!isDropDisabled}
+                />
+              );
             })}
           </Container>
         </DragDropContext>
