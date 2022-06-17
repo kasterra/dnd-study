@@ -37,7 +37,7 @@ const Column = ({ column, tasks }: IColumnProps) => {
   return (
     <Container>
       <Title>{column.title}</Title>
-      <Droppable droppableId={column.id}>
+      <Droppable droppableId={column.id} direction="horizontal">
         {(provided, snapshot) => (
           <TaskList
             {...provided.droppableProps}
