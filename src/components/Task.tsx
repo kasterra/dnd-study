@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import React from "react";
 import { Draggable } from "react-beautiful-dnd";
 
 interface IContainer {
@@ -51,4 +52,4 @@ const Task = ({ task, index }: ITaskProps) => {
   );
 };
 
-export default Task;
+export default React.memo(Task);
