@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Draggable } from "react-beautiful-dnd";
 
 interface IContainer {
-  isDragDisabled: boolean;
+  isDragDisabled?: boolean;
   isDragging: boolean;
 }
 
@@ -29,20 +29,14 @@ interface ITaskProps {
 }
 
 const Task = ({ task, index }: ITaskProps) => {
-  const isDragDisabled = task.id === "task-1";
   return (
-    <Draggable
-      draggableId={task.id}
-      index={index}
-      isDragDisabled={isDragDisabled}
-    >
+    <Draggable draggableId={task.id} index={index}>
       {(provided, snapshot) => (
         <Container
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
           isDragging={snapshot.isDragging}
-          isDragDisabled={isDragDisabled}
         >
           {task.content}
         </Container>
