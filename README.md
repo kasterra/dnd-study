@@ -6,7 +6,7 @@ React.js에서 쉽게 drag and drop 관련 기능을 구현할 수 있게 해주
 
 이 레포지토리는 yarn berry zero-install을 사용합니다. `git clone`을 통해서 clone 한 이후에 [아래](#📜-현재-제공중인-태그들)에서 소개한 태그들을 활용해서 `checkout`해서 사용하시면 됩니다.
 
-Create-react-app으로 만들어졌기에, 실행 해보려면 `yarn start`로 실행하면 됩니다. 
+Create-react-app으로 만들어졌기에, 실행 해보려면 `yarn start`로 실행하면 됩니다.
 
 최신버전 Ubuntu 22.04에서 Visual Studio Code로 작동이 됨을 확인하였습니다. 만약, 실행이 안되는 환경이 있으면 issue를 남겨 주세요!
 
@@ -30,8 +30,10 @@ git checkout <태그 명>
 - isDragDisabled : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 `isDragDisabled`를 이용해서 드래그 제한하기 부분
 - controlWithType : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 `TYPE`을 이용해서 drag를 더 자세히 제어하기 부분
 - isDropDiabled : [세번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-3/)에서 isDropDisabled를 이용한 제어 부분
+- horizontalDnd : [네번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-4/)에서 수평방향 dnd 만들기 부분
+- columnReorder : [네번째 소개 글](https://kasterra.github.io/react-beautiful-dnd-4/)에서 Column 재정렬 부분
 
-# ⚒️ Tech stacks used in this repo 
+# ⚒️ Tech stacks used in this repo
 
 본 레포지토리에서는 아래와 같은 테크 스택을 사용합니다.
 
